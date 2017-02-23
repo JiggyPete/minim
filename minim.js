@@ -22,6 +22,12 @@ function onMIDIFailure(error) {
 }
 
 function minimInput(message) {
+  console.log(message.data)
+  if(message.data[0] == 176) {
+    document.getElementById("minim__slider").textContent = message.data[2]
+    return
+  }
+
   var element = document.getElementById(message.data[1])
   if(element != null) {
     element.style.backgroundColor = colorFor(message.data[2]);
