@@ -5,6 +5,10 @@ body {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 .instructions {
   padding: 30px;
 }
